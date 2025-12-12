@@ -1,0 +1,40 @@
+===========================================
+COMANDOS PARA DEPLOY NO GITHUB E VERCEL
+===========================================
+
+1. SUBSTITUA "SEU_USUARIO" pelo seu usuário do GitHub
+2. Execute os comandos abaixo no terminal:
+
+-------------------------------------------
+PASSO 1: Conectar com GitHub
+-------------------------------------------
+git remote add origin https://github.com/SEU_USUARIO/landing-page-andrea.git
+git branch -M main
+git push -u origin main
+
+-------------------------------------------
+PASSO 2: Deploy na Vercel
+-------------------------------------------
+
+OPÇÃO A - Via Site (Mais Fácil):
+1. Acesse: https://vercel.com
+2. Faça login com GitHub
+3. Clique em "Add New Project"
+4. Selecione o repositório "landing-page-andrea"
+5. Clique em "Deploy"
+6. Pronto! Você receberá um link
+
+OPÇÃO B - Via Terminal:
+npm i -g vercel
+vercel login
+vercel
+
+-------------------------------------------
+ATUALIZAÇÕES FUTURAS
+-------------------------------------------
+git add .
+git commit -m "Descrição das mudanças"
+git push
+
+A Vercel atualiza automaticamente!
+
