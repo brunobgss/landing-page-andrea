@@ -147,6 +147,16 @@ body {
     padding: 10px 0;
 }
 
+@media (min-width: 769px) {
+    .header-content {
+        padding: 8px 0;
+    }
+    
+    .logo {
+        font-size: 1.0625rem;
+    }
+}
+
 .logo {
     font-size: 1.125rem;
     font-weight: 700;
