@@ -1,0 +1,18 @@
+{
+  "name": "landing-page-andrea",
+  "version": "1.0.0",
+  "description": "Landing page para Detox21 - Andréa Alexandre",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000",
+    "dev": "npx http-server -p 8000"
+  },
+  "keywords": [
+    "landing-page",
+    "detox",
+    "naturopatia"
+  ],
+  "author": "Andréa Alexandre",
+  "license": "MIT"
+}
+
