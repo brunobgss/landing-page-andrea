@@ -144,11 +144,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
+    padding: 10px 0;
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 700;
     color: var(--primary-purple-dark);
     letter-spacing: -0.5px;
