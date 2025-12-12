@@ -149,11 +149,20 @@ body {
 
 @media (min-width: 769px) {
     .header-content {
-        padding: 8px 0;
+        padding: 6px 0;
     }
     
     .logo {
-        font-size: 1.0625rem;
+        font-size: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.875rem;
+    }
+    
+    .cta-nav {
+        padding: 8px 20px;
+        font-size: 0.875rem;
     }
 }
 
