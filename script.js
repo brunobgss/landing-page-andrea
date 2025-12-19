@@ -125,16 +125,98 @@
     // ============================================
     // VIDEO PLACEHOLDER CLICK HANDLER
     // ============================================
-    const videoPlaceholder = document.querySelector('.video-placeholder');
-    if (videoPlaceholder) {
-        videoPlaceholder.addEventListener('click', function() {
-            // Aqui você pode adicionar a lógica para abrir o vídeo
-            // Por exemplo: abrir modal com vídeo do YouTube/Vimeo
-            console.log('Vídeo será implementado aqui');
+    // CONFIGURAÇÃO DO VÍDEO
+    // Escolha uma das opções abaixo:
+    
+    // OPÇÃO 1: YouTube (Recomendado)
+    // Substitua 'SEU_VIDEO_ID' pelo ID do vídeo do YouTube
+    // Exemplo: se o link é https://www.youtube.com/watch?v=abc123, use 'abc123'
+    const VIDEO_YOUTUBE_ID = 'SEU_VIDEO_ID'; // ⬅️ SUBSTITUA AQUI
+    
+    // OPÇÃO 2: Vimeo
+    // const VIDEO_VIMEO_ID = 'SEU_VIDEO_ID'; // Descomente e use se for Vimeo
+    
+    // OPÇÃO 3: Vídeo direto (MP4, WebM, etc)
+    // const VIDEO_DIRECT_URL = 'https://seu-dominio.com/video.mp4'; // Descomente e use se for vídeo direto
+    
+    const videoPlaceholder = document.getElementById('videoPlaceholder');
+    const videoEmbed = document.getElementById('videoEmbed');
+    const playButton = document.getElementById('playButton');
+    
+    if (videoPlaceholder && videoEmbed) {
+        // Função para carregar vídeo do YouTube
+        function loadYouTubeVideo(videoId) {
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.position = 'absolute';
+            iframe.style.top = '0';
+            iframe.style.left = '0';
+            iframe.style.border = 'none';
+            iframe.style.borderRadius = '20px';
             
-            // Exemplo de implementação:
-            // const videoUrl = 'https://www.youtube.com/embed/SEU_VIDEO_ID';
-            // openVideoModal(videoUrl);
+            videoEmbed.appendChild(iframe);
+            videoPlaceholder.style.display = 'none';
+            videoEmbed.style.display = 'block';
+        }
+        
+        // Função para carregar vídeo do Vimeo
+        function loadVimeoVideo(videoId) {
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+            iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+            iframe.allowFullscreen = true;
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.position = 'absolute';
+            iframe.style.top = '0';
+            iframe.style.left = '0';
+            iframe.style.border = 'none';
+            iframe.style.borderRadius = '20px';
+            
+            videoEmbed.appendChild(iframe);
+            videoPlaceholder.style.display = 'none';
+            videoEmbed.style.display = 'block';
+        }
+        
+        // Função para carregar vídeo direto
+        function loadDirectVideo(videoUrl) {
+            const video = document.createElement('video');
+            video.src = videoUrl;
+            video.controls = true;
+            video.autoplay = true;
+            video.style.width = '100%';
+            video.style.height = '100%';
+            video.style.objectFit = 'cover';
+            video.style.borderRadius = '20px';
+            
+            videoEmbed.appendChild(video);
+            videoPlaceholder.style.display = 'none';
+            videoEmbed.style.display = 'block';
+        }
+        
+        // Event listener para o clique
+        videoPlaceholder.addEventListener('click', function() {
+            if (VIDEO_YOUTUBE_ID && VIDEO_YOUTUBE_ID !== 'SEU_VIDEO_ID') {
+                loadYouTubeVideo(VIDEO_YOUTUBE_ID);
+            }
+            // Descomente uma das opções abaixo se usar Vimeo ou vídeo direto:
+            // else if (VIDEO_VIMEO_ID) {
+            //     loadVimeoVideo(VIDEO_VIMEO_ID);
+            // }
+            // else if (VIDEO_DIRECT_URL) {
+            //     loadDirectVideo(VIDEO_DIRECT_URL);
+            // }
+        });
+        
+        playButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (VIDEO_YOUTUBE_ID && VIDEO_YOUTUBE_ID !== 'SEU_VIDEO_ID') {
+                loadYouTubeVideo(VIDEO_YOUTUBE_ID);
+            }
         });
     }
 
@@ -342,8 +424,8 @@
     // ============================================
     // CONSOLE MESSAGE
     // ============================================
-    console.log('%c🌿 Natureza em Gotas', 'font-size: 20px; color: #7FB069; font-weight: bold;');
-    console.log('%cLanding Page Premium - Detox21', 'font-size: 14px; color: #8B6F9E;');
-    console.log('%cDesenvolvido com ❤️ para Andréa Alexandre', 'font-size: 12px; color: #666;');
+    console.log('%c🌿 NaturezaSemGotas', 'font-size: 20px; color: #7FB069; font-weight: bold;');
+    console.log('%cLanding Page Premium - Ultra Detox 21', 'font-size: 14px; color: #8B6F9E;');
+    console.log('%cDesenvolvido com ❤️ para Andréa Oliveira Souza', 'font-size: 12px; color: #666;');
 
 })();

@@ -70,18 +70,25 @@
                 </h1>
                 <div class="hero-video-center">
                     <div class="video-wrapper">
-                        <div class="video-placeholder">
-                            <div class="play-button-wrapper">
-                                <div class="play-button">
-                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M8 5v14l11-7z"/>
-                                    </svg>
+                        <div class="video-container" id="videoContainer">
+                            <!-- OPÇÃO 1: YouTube (Recomendado) -->
+                            <!-- Substitua VIDEO_ID pelo ID do vídeo do YouTube -->
+                            <!-- Exemplo: se o link é https://www.youtube.com/watch?v=abc123, o ID é abc123 -->
+                            <div class="video-placeholder" id="videoPlaceholder">
+                                <div class="play-button-wrapper">
+                                    <div class="play-button" id="playButton">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="video-overlay">
+                                    <p class="video-label">► ASSISTA AO VÍDEO</p>
+                                    <p class="video-duration">5:32 min</p>
                                 </div>
                             </div>
-                            <div class="video-overlay">
-                                <p class="video-label">► ASSISTA AO VÍDEO</p>
-                                <p class="video-duration">5:32 min</p>
-                            </div>
+                            <!-- O iframe do YouTube será inserido aqui quando o vídeo for clicado -->
+                            <div class="video-embed" id="videoEmbed" style="display: none;"></div>
                         </div>
                     </div>
                 </div>
