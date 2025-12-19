@@ -131,7 +131,7 @@
     // OPÇÃO 1: YouTube (Recomendado)
     // Substitua 'SEU_VIDEO_ID' pelo ID do vídeo do YouTube
     // Exemplo: se o link é https://www.youtube.com/watch?v=abc123, use 'abc123'
-    const VIDEO_YOUTUBE_ID = 'SEU_VIDEO_ID'; // ⬅️ SUBSTITUA AQUI
+    const VIDEO_YOUTUBE_ID = 'LCJyPd1c6_s'; // ✅ Vídeo configurado
     
     // OPÇÃO 2: Vimeo
     // const VIDEO_VIMEO_ID = 'SEU_VIDEO_ID'; // Descomente e use se for Vimeo
