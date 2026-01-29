@@ -1887,6 +1887,23 @@ body {
     margin-bottom: 12px;
 }
 
+.installment-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.installment-option {
+    font-size: 0.875rem;
+    color: var(--primary-purple);
+    background: rgba(139, 111, 158, 0.1);
+    padding: 6px 12px;
+    border-radius: 16px;
+    border: 1px solid rgba(139, 111, 158, 0.2);
+    font-weight: 500;
+}
+
 .price-savings {
     font-size: 1rem;
     color: var(--green-nature-dark);
